@@ -54,9 +54,6 @@ function HomeWrapper() {
         <WelcomeSection message="GET IN TOUCH WITH US" />
         <FormSection />
       </HomeSections>
-      <HomeSVGStyle>
-        <HomeSVG />
-      </HomeSVGStyle>
     </HomeWrapperStyle>
   )
 }

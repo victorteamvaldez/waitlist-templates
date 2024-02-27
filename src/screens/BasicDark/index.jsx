@@ -9,7 +9,6 @@ function BasicDark() {
     <ThemeProvider theme={basicDarkTheme}>
       <GlobalStyles />
       <HomeWrapper />
-      <BasicFooter />
     </ThemeProvider>
   )
 }

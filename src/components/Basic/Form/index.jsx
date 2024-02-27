@@ -20,24 +20,24 @@ const TextStyle = styled.span`
 `
 
 const Form = ({ handleAddedInList }) => {
-  const { user, onChangeInput, onSubmitForm } = useForm({ name: '', email: '' })
+  const { user, onChangeInput, onSubmitForm } = useForm({ nombre: '', email: '', telefono: '', area_experiencia: '' })
 
   const submitForm = () => {
-    handleAddedInList()
+    // handleAddedInList()
     onSubmitForm()
   }
 
-  const { name, email } = user
+  const { name, email, telefono, area_experiencia } = user
 
   return (
     <FormStyle onSubmit={submitForm}>
       <BasicInput
-        label="Name"
-        name="name"
+        label="Nombre"
+        name="nombre"
         value={name}
         onChange={onChangeInput}
         type="text"
-        placeholder="Your Name"
+        placeholder="Nombre Completo"
       />
       <BasicInput
         label="Email"
@@ -45,7 +45,25 @@ const Form = ({ handleAddedInList }) => {
         value={email}
         onChange={onChangeInput}
         type="email"
-        placeholder="Your Email"
+        required
+        placeholder="Correo Electrónico"
+      />
+      <BasicInput
+        label="Teléfono"
+        name="telefono"
+        value={telefono}
+        onChange={onChangeInput}
+        type="text"
+        placeholder="Teléfono"
+        required
+      />
+      <BasicInput
+        label="Area de Experiencia"
+        name="area_experiencia"
+        value={area_experiencia}
+        onChange={onChangeInput}
+        type="text"
+        placeholder="Area de Experiencia"
         required
       />
       <Box mt={50} flxRight smNone>
